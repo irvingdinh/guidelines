@@ -2,8 +2,8 @@
 
 ### Step 1
 
-- Run `bun init`, blank template at the folder, or the subfolder
-- Remove `index.ts`, `.gitignore`
+- Run `npm init -y` at the folder, or the subfolder
+- Remove `.gitignore`
 - Download https://raw.githubusercontent.com/github/gitignore/refs/heads/main/Node.gitignore into `./.gitignore`, adding
   these lines into the end of the file
 
@@ -12,20 +12,20 @@
 .idea
 ```
 
-- Remove `module` and `type` out of `package.json`
+- Remove `type` out of `package.json` if present
 
 ### Step 2
 
 - Run
 
 ```
-bun add @nestjs/common @nestjs/core @nestjs/platform-express reflect-metadata rxjs
+npm install @nestjs/common @nestjs/core @nestjs/platform-express reflect-metadata rxjs
 ```
 
 - Run
 
 ```
-bun add -D @nestjs/cli @nestjs/schematics @nestjs/testing typescript @types/node @types/express ts-loader
+npm install -D @nestjs/cli @nestjs/schematics @nestjs/testing typescript @types/node @types/express ts-loader
 ```
 
 - Add these following scripts into `package.json`
@@ -162,11 +162,11 @@ export class AppService {
 }
 ```
 
-- Run `bun run build` to ensure everything is fine
+- Run `npm run build` to ensure everything is fine
 
 ### Step 5
 
-- Run `bun add -D eslint @eslint/js eslint-config-prettier eslint-plugin-simple-import-sort typescript-eslint`
+- Run `npm install -D eslint @eslint/js eslint-config-prettier eslint-plugin-simple-import-sort typescript-eslint`
 - Create `eslint.config.mjs`, adding this content
 
 ```js
@@ -199,7 +199,7 @@ export default tseslint.config(
 );
 ```
 
-- Run `bun add --dev --exact prettier prettier-plugin-organize-imports`
+- Run `npm install -D --save-exact prettier prettier-plugin-organize-imports`
 - Create `.prettierrc`, adding this content
 
 ```
@@ -220,7 +220,7 @@ export default tseslint.config(
 
 ### Step 6
 
-- Run `bun add -D jest @types/jest ts-jest @nestjs/testing supertest @types/supertest`
+- Run `npm install -D jest @types/jest ts-jest @nestjs/testing supertest @types/supertest`
 
 - Create `jest.config.ts`, adding this content
 
@@ -319,5 +319,5 @@ describe('AppController (e2e)', () => {
 
 ### Step 7
 
-- Run `bun run build` to ensure everything is fine
-- Run `bun lint` and `bun lint:fix` to clean-up the codebase, ready to go
+- Run `npm run build` to ensure everything is fine
+- Run `npm run lint` and `npm run lint:fix` to clean-up the codebase, ready to go
