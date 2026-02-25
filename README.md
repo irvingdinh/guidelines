@@ -16,4 +16,7 @@ claude --dangerously-skip-permissions -p 'Following the guideline at https://git
 
 # Standalone NestJS + Vite React
 claude --dangerously-skip-permissions -p 'Following the guideline at https://github.com/irvingdinh/guidelines/blob/main/init-standalone-nestjs-vite-react.md to create a standalone application here (. - current cwd)'
+
+# Set up local reference convention
+claude --dangerously-skip-permissions -p 'Following the guideline at https://github.com/irvingdinh/guidelines/blob/main/use-local-reference.md to set up the local reference convention for this project (. - current cwd)'
 ```
